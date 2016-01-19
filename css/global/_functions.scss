@@ -1,0 +1,21 @@
+// Functions
+@function image-url($filename) {
+  @return url('img/#{$filename}');
+}
+
+@function icon-url($filename) {
+  @return url('img/svg/#{$filename}');
+}
+
+@mixin font-url($fontname) {
+  src: url('../fonts/#{$fontname}.eot');
+  src: url('../fonts/#{$fontname}.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/#{$fontname}.woff') format('woff');
+}
+
+@mixin font($familyname, $fontname, $weight, $style) {
+  font-family: $familyname;
+  @include font-url($fontname);
+  font-weight: $weight;
+  font-style: $style;
+}

@@ -1,0 +1,61 @@
+.footer-main {
+  background: $black;
+  padding: $half-gutter * 1.25 0;
+
+  .wrapper {
+  }
+
+  .logo {
+    display: block;
+    float: left;
+    width: rem(120);
+    svg {
+      max-width: 100%;
+    }
+    .text-bergdoll {
+      fill: $white;
+    }
+    .text-insurance {
+      fill: $blue-highlight;
+    }
+  }
+
+  .nav-footer {
+    float: right;
+    padding-top: $vertical-bumper-eighth;
+    a {
+      @extend %aa-text;
+      font-size: $type-paragraph * 0.85;
+      display: inline-block;
+      font-weight: $type-bold;
+      padding: 0 $half-gutter * 0.75;
+      &:not(:hover) {
+        color: $white-transparent;
+      }
+      &:hover {
+        color: $white;
+      }
+      &:last-of-type {
+        padding-right: 0;
+      }
+
+      &.current-menu-item {
+        &:not(:hover) {
+          color: $white-mid-transparent;
+        }
+        span {
+          &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 3px;
+            left: 0;
+            width: 100%;
+            border-bottom: $thick-border-width solid $blue-highlight;
+          }
+        }
+      }
+    }
+  }
+  
+}

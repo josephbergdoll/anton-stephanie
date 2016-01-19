@@ -1,0 +1,28 @@
+headline: "Get In Touch"
+copy: "We&rsquo;re here 9-5 from Monday through Friday for all your insurance questions and needs."
+sections:
+  - headline: "Claims"
+    copy: "The Nationwide Claims Center is available 24/7 for all claim-related inquiries: <strong>Call 1-800-421-3535</strong>"
+    linksLayout: "inline"
+    links:
+      - text: "File a Claim Online"
+        url: "http://www.nationwide.com/start-insurance-claim.jsp"
+
+      - text: "Check Status of your claim"
+        url: "https://nisecure.nationwide.com/eClaims/inquiry/secure/members/claims.asp"
+
+  - headline: "All Other Inquiries"
+    copy: "We&rsquo;re conveniently located in North Scottsdale off of the 101's Bell Road exit &ndash; near Westworld."
+    linksLayout: "list"
+    links:
+      - title: "Call Us"
+        text: "480-315-0400"
+        url: "tel:+14803150400"
+
+      - title: "Visit"
+        text: "16420 North 92nd St, Suite 105<br>Scottsdale, AZ 85260"
+        url: "https://www.google.com/maps/place/16420+N+92nd+St,+Scottsdale,+AZ+85260"
+
+      - title: "Email"
+        text: "Hello(at)BergdollInsurance.com"
+        url: "mailto:hello@bergdollinsurance.com"

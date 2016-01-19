@@ -1,0 +1,19 @@
+#about {
+  .owner-img {
+    $owner-img-size: rem(54);
+    width: $owner-img-size;
+    height: $owner-img-size;
+    border-radius: 100%;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: $half-gutter;
+    img {
+      display: block;
+    }
+  }
+  .owner-info {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}

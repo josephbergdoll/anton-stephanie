@@ -1,0 +1,119 @@
+.pretty-select {
+  display: inline-block;
+  
+  .form-field {
+    display: none;
+  }
+
+  select {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: $type-bold;
+    color: $white-light-transparent;
+    border-bottom: $thick-border-width solid transparent;
+    
+    &.valid {
+      color: $white;
+    }
+
+    &:focus {
+      border-bottom: $thick-border-width solid $white;
+    }
+  }
+
+  .selected-option {
+    display: inline-block;
+    text-align: left;
+    @extend %sg-h1;
+    font-size: inherit;
+    min-width: rem(100);
+    font-weight: $type-bold;
+    color: $white-mid-transparent;
+    background: transparent;
+    transition: all $hover-out $ease-out-cubic;
+    line-height: $line-small * 1.1;
+    cursor: pointer;
+    border-bottom: $thick-border-width solid $white-light-transparent;
+    &:hover,
+    &.highlight {
+      color: $white;
+      background: $blue-bg-dark;
+      border-bottom: $thick-border-width solid $blue-highlight;
+    }
+  }
+
+  
+  .select-container {
+    display: inline-block;
+    position: relative;
+  }
+
+  .select-options {
+    @extend %sg-h5;
+    color: $light-black;
+    text-align: left;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-height: 50%;
+    display: none;
+    border-radius: $standard-border-radius $standard-border-radius 0 0;
+    opacity: 0;
+    z-index: 200;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    @include media($medium-up) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: auto;
+      width: 100%;
+      width: rem(300);
+      max-height: 300px;
+      border: $border-dark-grey;
+      border-radius: $standard-border-radius;
+    }
+
+    li {
+      cursor: pointer;
+      width: 100%;
+      padding: $vertical-bumper-quarter $vertical-bumper-third;
+      background: $white;
+      transition: all $hover-out $ease-out-cubic;
+      &:not(:last-of-type) {
+        border-bottom: $standard-border;
+      }
+      &:hover,
+      &.highlight {
+        background: $light-grey;
+        transition: all $hover-in $ease-out-cubic;
+      }
+
+      &.selected {
+        color: $blue-highlight;
+      }
+    }
+  }
+
+
+  // States
+  .is-touch & {
+    display: inline-block;
+  }
+
+  &.valid {
+    .selected-option {
+      color: $white-dark-transparent;
+      min-width: 0 !important;
+    }
+  }
+
+  &.focused {
+    .selected-option {
+      color: $white;
+      border-bottom: $thick-border-white;
+    }
+  }
+
+}

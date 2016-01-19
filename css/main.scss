@@ -1,0 +1,33 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import "global/reset";
+@import "bourbon";
+@import "global/grid-settings";
+@import "toddy/toddy";
+@import "global/grid-classes";
+
+// Globals
+@import "global/functions";
+@import "global/fonts";
+@import "global/variables";
+@import "global/animations";
+@import "global/mixins";
+@import "global/base";
+@import "global/styleguide";
+@import "global/forms";
+@import "global/layout";
+@import "global/utils";
+@import "global/slick";
+
+// Components
+@import "components/header";
+@import "components/footer";
+@import "components/pretty-select";
+@import "components/get-quote";
+@import "components/about";
+@import "components/contact";
+
+// Templates
+// @import "templates/*";

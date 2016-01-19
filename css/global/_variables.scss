@@ -1,0 +1,217 @@
+$max-width: rem(1900);
+$site-width: 90%;
+
+// Wrapper Paddings
+$wrapper-padding-small: 1rem;
+$wrapper-padding-medium: 1.5rem;
+$wrapper-padding-large: 2rem;
+$wrapper-padding-xxlarge: 2rem;
+
+$header-height-small: rem(61);
+$header-height-large: rem(77);
+$footer-height: rem(74);
+
+// Type Styles
+// $sans: "BIFS-sans", 'Helvetica Neue', Arial, Helvetica, sans-serif;
+$sans: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+$headline: "Sharp", 'Helvetica Neue', Arial, Helvetica, sans-serif;
+
+$type-black: 800;
+$type-bold: 700;
+$type-medium: 500;
+$type-book: 400;
+$type-light: 100;
+
+// Font Sizes
+$type-paragraph: 0.9375rem; // 15pt
+$type-small: 1.125rem; // 20pt
+$type-mid: 1.5rem; // 28pt
+$type-large: 3rem; // 48pt
+
+// Line Heights
+$line-xsmall: 0.9;
+$line-small: 1;
+$line-medium: 1.25;
+$line-large: 1.4;
+$line-xlarge: 1.6;
+$line-paragraph: 1.3;
+
+// Tracking
+$wide-tracking: 0.2em;
+$mid-tracking: 0.075em;
+$close-tracking: 0.05em;
+$close-negative-tracking: -0.01em;
+
+// Indents
+$paragraph-text-indent: 2em;
+
+// Theme Color Scheme
+$blue-bg: #0b61b7;
+$blue-bg-translucent: rgba(11, 97, 183, 0.75);
+$blue-bg-dark: darken($blue-bg, 5%);
+$blue-highlight: #27aae1;
+$blue-highlight-hover: lighten($blue-highlight, 8%);
+
+// Brands
+$itunes-red: #f22937;
+$rdio-blue: rgb(0, 143, 213);
+$spotify-green: rgb(0, 217, 90);
+
+// Colors
+$white: white;
+$black: black;
+
+$orange: #e57828;
+
+$red: #f04242;
+$red-dark: darken($red, 10%);
+
+$lightest-white: #fbfbfb;
+$lighter-white: #f8f8f8;
+$light-white: #f3f3f3;
+$white-photobg: #f1f1f1;
+
+$white-light-transparent: rgba(255,255,255,0.35);
+$white-transparent: rgba(255,255,255,0.5);
+$white-less-transparent: rgba(255,255,255,0.75);
+$white-mid-transparent: rgba(255,255,255,0.85);
+$white-dark-transparent: rgba(255,255,255,0.95);
+
+$gold: #c8b47d;
+$gold-hover: #baa56d;
+
+$grey-border: rgba(0,0,0,0.05);
+$grey-border-dark: rgba(255,255,255,0.1);
+$grey-border-solid: #eee;
+
+$light-grey: #eee;
+$mid-grey: #ddd;
+$dark-grey: #ccc;
+
+$text-lighter-grey: #cccccc;
+$text-light-grey: #aaaaaa;
+$text-mid-grey: #979797;
+$text-dark-grey: #777;
+$text-grey-paragraph: #58595b;
+
+$light-black: #414042;
+$mid-black: #333;
+$dark-black: #232323;
+
+$black-lightest-transparent: rgba(0,0,0,0.1);
+$black-light-transparent: rgba(0,0,0,0.25);
+$black-transparent: rgba(0,0,0,0.5);
+$black-less-transparent: rgba(0,0,0,0.5);
+$black-mid-transparent: rgba(0,0,0,0.7);
+$black-dark-transparent: rgba(0,0,0,0.8);
+$black-darkest-transparent: rgba(0,0,0,0.9);
+
+
+$text-shadow: 0px 1px 10px rgba(0,0,0,0.35);
+
+// Misc
+$photo-opacity: 0.85;
+
+//Sizes
+$half-gutter: $fixed-gutter-width/2;
+$full-gutter: $fixed-gutter-width;
+$vertical-bumper: 4.5rem;
+$vertical-bumper-half: $vertical-bumper * 0.5;
+$vertical-bumper-third: $vertical-bumper * 0.33;
+$vertical-bumper-quarter: $vertical-bumper * 0.25;
+$vertical-bumper-eighth: $vertical-bumper * 0.125;
+
+
+$large-nav-width: 9.375rem;
+
+$large-link-padding: 1.35rem 0 0;
+
+$view-icon-width: 1.05rem;
+
+// Nav Specific
+$nav-horz-bumper-small: 0.375rem;
+$nav-horz-bumper-medium: 0.5rem;
+$nav-horz-bumper-large: 0.6875rem;
+$nav-vertical-bumper: 0.5rem;
+$nav-height: 2.125rem;
+
+$close-button-height: $nav-height;
+
+// Button Styles
+$button-padding: 0.2rem 0.75rem;
+$button-border-radius: 0.35rem;
+
+// Portfolio Card Specific
+$portfolio-thumb-padding: 1.5rem;
+
+// Portfolio Page Specific
+$arrow-button-width: 2.5rem;
+$arrow-button-height: $arrow-button-width * 1.65;
+$arrow-button-padding: 1rem;
+
+$portfolio-controls-height: 1.5rem;
+$portfolio-bumper-spacing: $portfolio-controls-height + $vertical-bumper-half + $vertical-bumper-quarter;
+
+$portfolio-slide-icon: 2.5rem;
+
+
+// Artist Card Specific
+$artist-card-image-padding: 60%;
+
+// Borders
+$border-width: 1px;
+$thick-border-width: 3px;
+
+$standard-border-radius: 5px;
+
+$border-orange: $border-width solid $orange;
+$border-transparent: $border-width solid transparent;
+$standard-border: $border-width solid $grey-border-solid;
+$standard-border-opacity: $border-width solid $grey-border;
+$standard-border-opacity-dark: $border-width solid $grey-border-dark;
+$border-dotted: $border-width dotted $grey-border;
+
+$thick-standard-border: $thick-border-width solid $grey-border;
+
+$border-black: $border-width solid $black;
+$thick-border-black: $thick-border-width solid $black;
+
+$border-light-black: $border-width solid $light-black;
+$border-mid-black: $border-width solid $mid-black;
+$border-dark-black: $border-width solid $dark-black;
+
+$border-mid-grey: $border-width solid $mid-grey;
+$border-dark-grey: $border-width solid $dark-grey;
+
+$border-text-light-grey: $border-width solid $text-light-grey;
+$border-text-mid-grey: $border-width solid $text-mid-grey;
+$border-text-dark-grey: $border-width solid $text-dark-grey;
+$border-text-grey-paragraph: $border-width solid $text-grey-paragraph;
+
+$thick-border-text-light-grey: $thick-border-width solid $text-light-grey;
+$thick-border-text-mid-grey: $thick-border-width solid $text-mid-grey;
+$thick-border-text-dark-grey: $thick-border-width solid $text-dark-grey;
+$thick-border-text-grey-paragraph: $thick-border-width solid $text-grey-paragraph;
+
+$thick-border-mid-grey: $thick-border-width solid $mid-grey;
+$thick-border-dark-grey: $thick-border-width solid $dark-grey;
+
+$border-white: $border-width solid $white;
+$border-gold: $border-width solid $gold;
+$border-mast: 2px solid $mid-black;
+$dotted-border: $border-width dotted $grey-border-solid;
+
+$thick-border-trans: $thick-border-width solid transparent;
+$thick-border-white: $thick-border-width solid $white;
+
+// Speeds
+$page-transition: 100ms;
+$caption-transition: 200ms;
+$hover-in: 150ms;
+$hover-out: 300ms;
+$short-transition: 400ms;
+$mid-transition: 600ms;
+$long-transition: 800ms;
+$longest-transition: 1200ms;
+
+$cubic-ease: cubic-bezier(0.47, 0, 0, 0.95);

@@ -1,0 +1,48 @@
+%form-reset {
+  text-decoration: none;
+  @include appearance(none);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  outline: 0;
+}
+
+input,
+textarea,
+select,
+button {
+  @extend %form-reset;
+}
+
+%sg-button {
+  @extend %aa-text;
+  cursor: pointer;
+  font-family: $sans;
+  font-size: $type-paragraph;
+  color: $white;
+  font-weight: $type-bold;
+  background-color: $blue-highlight;
+  border-radius: $standard-border-radius;
+  padding: 1.25rem 6rem 1.15rem;
+  transition: background-color $hover-out $ease-out-cubic;
+  border-bottom: $thick-border-width solid $blue-highlight-hover;
+  transition: all $hover-out $ease-out-cubic;
+  &:hover {
+    background-color: $blue-highlight-hover;
+    transition: all $hover-in $ease-out-cubic;
+  }
+  &:disabled {
+    cursor: not-allowed;
+    background: $blue-bg-dark;
+    color: $blue-bg;
+    border-bottom: $thick-border-width solid transparent;
+  }
+  .quote-loading & {
+    cursor: wait;
+  }
+}
+
+*[class*="button"],
+button {
+  @extend %sg-button;
+}

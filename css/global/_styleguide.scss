@@ -1,0 +1,651 @@
+// Global Styleguide
+body {
+  -webkit-tap-highlight-color: black;
+  font-family: $sans;
+  font-weight: $type-book;
+  background-color: $body-bg-color;
+  overflow-x: hidden;
+  color: $black;
+}
+
+::selection {
+  background: $light-white;
+  color: $text-grey-paragraph;
+}
+
+::-moz-selection {
+  background: $light-white;
+  color: $text-grey-paragraph;
+}
+
+a {
+  color: $black;
+  transition: color $hover-out ease-out;
+  &:hover {
+    color: $black;
+    transition: color $hover-in ease-out;
+  }
+}
+
+.nbsp {
+  // font-size: 0.8em !important;
+}
+
+%icon {
+  font-family: 'icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.icon-close-x:before {
+  content: "\e900";
+}
+.icon-list-view:before {
+  content: "\e901";
+}
+.icon-grid-view:before {
+  content: "\e902";
+}
+.icon-left-arrow:before {
+  content: "\e903";
+}
+.icon-right-arrow:before {
+  content: "\e904";
+}
+.icon-location:before {
+  content: "\e905";
+}
+.icon-play-button:before {
+  content: "\e906";
+}
+
+
+%sg-h1 {
+  font-family: $headline;
+  font-size: $type-mid;
+  font-weight: $type-book;
+  letter-spacing: $close-negative-tracking;
+  @include media($medium-only) {
+    font-size: $type-mid;
+  }
+  @include media($large-up) {
+    font-size: $type-large;
+  }
+  @extend %aa-text;
+}
+
+%sg-h2 {
+  font-family: $headline;
+  font-size: $type-mid;
+  font-weight: $type-medium;
+  letter-spacing: $close-negative-tracking;
+  @extend %aa-text;
+  @include media($large-up) {
+    font-size: $type-mid;
+  }
+}
+
+%sg-h3 {
+  font-family: $sans;
+  font-size: $type-mid;
+  font-weight: $type-bold;
+  @extend %no-aa-text;
+}
+
+%sg-h4 {
+  font-family: $sans;
+  font-size: $type-small;
+  font-weight: $type-bold;
+  @extend %aa-text;
+}
+
+%sg-h5 {
+  font-family: $sans;
+  font-size: $type-paragraph;
+  font-weight: $type-bold;
+  @extend %aa-text;
+}
+
+%sg-h6 {
+  font-family: $sans;
+  font-size: $type-paragraph;
+  font-weight: $type-book;
+  @extend %aa-text;
+}
+
+%sg-body-copy {
+  font-family: $sans;
+  font-size: $type-paragraph;
+  font-weight: $type-book;
+  color: $text-grey-paragraph;
+  line-height: $line-paragraph;
+  @extend %aa-text;
+  strong {
+    color: $black;
+  }
+}
+
+%sg-body-copy-sm {
+  @extend %sg-body-copy !optional;
+}
+
+%sg-body-copy-xsm {
+  @extend %sg-body-copy !optional;
+}
+
+%sg-body-copy-lg {
+  @extend %sg-body-copy !optional;
+}
+
+%sg-body-link {
+}
+
+// body-link is for links used within copy blocks. text-link is used for non-button links all alone in the design.
+
+%sg-text-link {
+  font-size: $type-paragraph;
+  font-weight: $type-book;
+  color: $text-light-grey;
+  transition: color $hover-out $ease-out-cubic;
+  display: inline-block;
+  @extend %aa-text;
+}
+
+%sg-text-cta {
+  font-weight: $type-medium;
+  color: $black;
+  &:hover {
+    color: $orange;
+  }
+  &:active {
+    color: $text-mid-grey;
+  }
+}
+
+[class*="text-link"] {
+  @extend %sg-text-link !optional;
+}
+
+a[class*="text-link"] {
+  &:hover {
+    color: $black;
+    transition: color $hover-in $ease-out-cubic;
+  }
+  &:active {
+    color: $orange;
+  }
+
+  &[class*="forward"] {
+    &:after {
+      @extend %icon;
+      font-size: 0.7em;
+      margin-left: 0.5em;
+      content: "\e904";
+    }
+  }
+
+  &[class*="back"] {
+    &:before {
+      @extend %icon;
+      font-size: 0.7em;
+      margin-right: 0.5em;
+      content: "\e903";
+    }
+  }
+
+  &[class*="cta"] {
+    @extend %sg-text-cta !optional;
+  }
+}
+
+.text-link-map {
+  &:before {
+    @extend %icon;
+    font-size: 0.85em;
+    margin-right: 0.3em;
+    content: "\e905";
+  }
+}
+
+.map-icon {
+  &:before {
+    @extend %icon;
+    font-size: 0.85em;
+    margin-right: 0.3em;
+    content: "\e905";
+  }
+}
+
+.text-link-mid {
+  &:not(:hover) {
+    color: $text-mid-grey;
+  }
+}
+
+.text-link-dark {
+  &:not(:hover) {
+    color: $text-dark-grey;
+  }
+}
+
+.close-link {
+  font-size: $type-small;
+  color: $text-light-grey;
+  line-height: $line-small;
+  transition: all $hover-out $ease-in-out-cubic;
+  &:before {
+    @extend %icon;
+    content: "\e900";
+  }
+  &:hover {
+    color: $mid-black;
+    transition: all $hover-in $ease-in-out-cubic;
+  }
+  &:active {
+    transform: scale(0.8);
+  }
+}
+
+
+.orange-dot {
+  &:before {
+    content: '\0025CF';
+    color: $orange;
+    margin-right: 0.25em;
+  }
+}
+
+.nav-link {
+  @extend %sg-text-link;
+  line-height: $line-medium;
+}
+
+
+%sg-blockquote {
+  @extend %sg-h1;
+  font-weight: $type-medium;
+  quotes: "“" "”" "‘" "’";
+  position: relative;
+  padding-left: $vertical-bumper-half;
+  border-left: $standard-border;
+  @include media($large-up) {
+    padding-left: 0;
+    border: 0;
+  }
+  &:before,
+  &:after {
+    font-weight: $type-book;
+    color: $text-dark-grey;
+  }
+  &:before {
+    content: open-quote;
+    position: absolute;
+    top: 0;
+    left: $vertical-bumper-quarter;
+    @include media($large-up) {
+      right: 100%;
+      left: auto;
+      padding-right: 0.1em;
+    }
+  }
+  &:after {
+    content: close-quote;
+  }
+
+}
+
+h1,h2,h3,h4 {
+  &.sans {
+    font-family: $sans;
+  }
+}
+
+h1, .h1 {
+  @extend %sg-h1 !optional;
+}
+
+h2, .h2 {
+  @extend %sg-h2 !optional;
+}
+
+h3, .h3 {
+  @extend %sg-h3 !optional;
+}
+
+h4, .h4 {
+  @extend %sg-h4 !optional;
+}
+
+h5, .h5 {
+  @extend %sg-h5 !optional;
+}
+
+h6, .h6 {
+  @extend %sg-h6 !optional;
+}
+
+p {
+  @extend %sg-body-copy !optional;
+  max-width: rem(400);
+  text-indent: $full-gutter;
+  &:first-of-type {
+    text-indent: 0;
+  }
+  a {
+    @extend %sg-body-link !optional;
+  }
+  &.p-small {
+    @extend %sg-body-copy-sm;
+  }
+  &.p-xsmall {
+    @extend %sg-body-copy-xsm;
+  }
+}
+
+blockquote {
+  @extend %sg-blockquote !optional;
+}
+
+.text-one-column {
+  @include media($large-up) {
+    width: 50%;
+    padding-right: $half-gutter;
+  }
+}
+.text-two-columns {
+  @include media($large-up) {
+    columns: auto 2;
+    column-gap: $full-gutter;
+  }
+}
+
+.text-link {
+  @extend %sg-text-link !optional;
+}
+
+.text-cta-wrap {
+  .text-cta {
+    position: absolute;
+    white-space: nowrap;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%) scale(1.25, 1.25);
+    opacity: 0;
+    transition: transform $hover-out ease-out, opacity $hover-out ease-out;
+  }
+}
+
+.text-cta {
+  @extend %sg-text-cta !optional;
+}
+
+%text-cta-hover {
+  transform: translateY(-50%) translateX(-50%) scale(1, 1);
+  opacity: 1;
+  transition: transform $hover-in ease-out 25ms, opacity $hover-in ease-out;
+}
+
+%hover-stroke-hover {
+  &:after {
+    width: 100%;
+    left: 0;
+    border-bottom: $border-black;
+    transition: all $hover-in ease-out;
+  }
+}
+
+.hover-stroke {
+  display: table;
+  position: relative;
+  &:after {
+    content:'';
+    display: block;
+    position: absolute;
+    width: 0px;
+    height: 1px;
+    border-bottom: $border-black;
+    bottom: -($vertical-bumper-quarter * 0.5);
+    left: 0;
+    transition: all $hover-out ease-out;
+  }
+  &:hover {
+    @extend %hover-stroke-hover;
+  }
+}
+
+.count {
+  color: $text-lighter-grey;
+  font-weight: $type-book;
+  transition: color $hover-out ease-out;
+}
+
+[class^="sep"] {
+  margin-left: 0.5rem;
+  margin-right: 0.8rem;
+  height: 100%;
+}
+
+.sep-comma {
+  color: $text-light-grey;
+  margin-left: 0;
+  margin-right: 0;
+  &:before {
+    content: ', ';
+  }
+}
+
+.sep-ndash {
+  color: $text-light-grey;
+  margin-left: 0;
+  margin-right: 0;
+  &:before {
+    content: '\2013';
+  }
+}
+
+.sep-vertical {
+  border-right: $border-mid-grey;
+}
+
+.inline-list {
+  li {
+    display: inline;
+  }
+}
+
+.inline-heading {
+  display: inline-block;
+  margin-right: 0.25rem;
+}
+
+.type-light {
+  font-weight: $type-light;
+}
+
+.type-book {
+  font-weight: $type-book;
+}
+
+.type-medium {
+  font-weight: $type-medium;
+}
+
+.type-bold {
+  font-weight: $type-bold;
+}
+
+.grey-paragraph {
+  color: $text-grey-paragraph;
+  a {
+    color: $text-grey-paragraph;
+    &:hover {
+      color: $black;
+    }
+  }
+}
+
+.blue {
+  color: $blue-highlight;
+  a {
+    color: $blue-highlight;
+    &:hover {
+      color: $blue-highlight-hover;
+    }
+  }
+}
+
+.light-grey {
+  color: $text-light-grey;
+  a {
+    color: $text-light-grey;
+    &:hover {
+      color: $black;
+    }
+  }
+}
+
+.mid-grey {
+  color: $text-mid-grey;
+  a {
+    color: $text-mid-grey;
+    &:hover {
+      color: $black;
+    }
+  }
+}
+
+.dark-grey {
+  color: $text-dark-grey;
+  a {
+    color: $text-dark-grey;
+    &:hover {
+      color: $black;
+    }
+  }
+}
+
+.lighter-grey {
+  color: $text-lighter-grey;
+  a {
+    color: $text-lighter-grey;
+    &:hover {
+      color: $mid-black;
+    }
+  }
+}
+
+.light-black {
+  color: $light-black;
+}
+
+.mid-black {
+  color: $mid-black;
+}
+
+.dark-black {
+  color: $dark-black;
+}
+
+.black {
+  color: $black;
+}
+
+.line-small {
+  line-height: $line-small !important;
+}
+
+.line-medium {
+  line-height: $line-medium !important;
+}
+
+.line-large {
+  line-height: $line-large !important;
+}
+
+.line-paragraph {
+  line-height: $line-paragraph !important;
+}
+
+hr {
+  height: 1px;
+  border: 0;
+  border-bottom: $standard-border;
+  display: block;
+}
+
+%black-hover {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: $black-dark-transparent;
+  opacity: 0;
+  transition: opacity $hover-out ease-out;
+}
+
+%black-hover-psuedo {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: $black-transparent;
+  opacity: 0;
+  transition: opacity $hover-out ease-out;
+}
+
+
+
+$scroll-gradient-height: 3rem;
+.has-scroll-gradient {
+  position: relative;
+  .scroll-gradient {
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: $scroll-gradient-height;
+    pointer-events: none;
+    opacity: 0.8;
+    @include whitegradient;
+    @include media($medium-up) {
+      display: block;
+    }
+    &.bottom {
+      opacity: 0 !important;
+    }
+  }
+  &.dark {
+    .scroll-gradient {
+      @include blackgradient;
+    }
+  }
+}
