@@ -1,9 +1,18 @@
 ---
 layout: default
+preheadline: "The Union Of"
+headline: "ANTON PETER ANGER<br>ST&Eacute;PHANIE ELISABETH SOPHIA<br>van SASSE van YSSELT"
 ---
 
-section#first
+section#first.full-viewport
   .photo-inner
 
 section#second
+  .wrapper
+    .row
+      .headline.small-12.medium-4.columns
+        h5 {{ page.preheadline }}
+        h1 {{ page.headline }}
+
+section#third
   {% include rsvp.slim %}

@@ -84,7 +84,7 @@ a {
 %sg-h1 {
   font-family: $headline;
   font-size: $type-mid;
-  font-weight: $type-book;
+  font-weight: $type-bold;
   letter-spacing: $close-negative-tracking;
   @include media($medium-only) {
     font-size: $type-mid;
