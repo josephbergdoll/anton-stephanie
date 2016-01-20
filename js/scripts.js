@@ -1,11 +1,11 @@
 
-
 $(document).ready(function() {
   var
     $html = $('html'),
     $body = $('body'),
     $getQuote = $body.find('#get-quote'),
     $submitQuote = $body.find('#submit-quote');
+  
 
   function validateEmail(email) {
     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -58,6 +58,20 @@ $(document).ready(function() {
         console.log('error!');
     }
   }
+
+  $('#lastname').keyup(function() {
+    var
+      thisVal = $(this).val(),
+      val = thisVal.toLowerCase();
+    console.log(val);
+    if (val.indexOf('anger') != -1 || val.indexOf('van sasse') != -1 || val.indexOf('van sasse van ysselt') != -1) {
+      console.log('yes');
+      $('body').find('.js-guests').show();
+    }
+    else {
+      $('body').find('.js-guests').hide();
+    }
+  });
 
   $('#rsvp-form').submit(function(event) {
     event.preventDefault();
