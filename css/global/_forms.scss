@@ -14,12 +14,35 @@ button {
   @extend %form-reset;
 }
 
+label {
+  display: block;
+  @extend %sg-h6;
+  margin-bottom: $vertical-bumper-eighth;
+  input[type='checkbox'] + & {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-left: $vertical-bumper-eighth;
+    cursor: pointer;
+  }
+}
+
+input[type='checkbox'] {
+  margin-bottom: $vertical-bumper-quarter;
+}
+
 input[type='text'],
 input[type='email'] {
   background: $light-white;
   padding: $half-gutter * 0.5;
   font-family: $sans;
   font-size: $type-paragraph;
+  margin-bottom: $vertical-bumper-quarter;
+  border: $border-width solid $light-white;
+  transition: all $hover-out $ease-out-cubic;
+  &:focus {
+    background: transparent;
+    border: $border-black;
+  }
 }
 
 %sg-button {

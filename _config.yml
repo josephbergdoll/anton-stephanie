@@ -15,7 +15,7 @@ collections:
     output: false
 
 # Build settings
-port: 4040
+port: 5000
 markdown: rdiscount
 timezone: America/New_York
 source: .

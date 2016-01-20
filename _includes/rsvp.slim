@@ -1,22 +1,24 @@
-form#rsvp-form action=""/
-  .first-name
-    label for="firstname" First Name
-    input id="firstname" name="firstname" type="text" placeholder="First"/
-  
-  .last-name
-    label for="lastname" Last Name
-    input id="lastname" name="lastname" type="text" placeholder="Last"/
-  .email
-    label for="email" Email
-    input id="email" name="email" type="email" placeholder="you@example.com"/
+.rsvp/
+  form#rsvp-form
+    .name-wrap.row
+      .first-name.small-12.medium-6.columns
+        label for="firstname" First Name
+        input id="firstname" name="firstname" type="text" placeholder="First"
+      
+      .last-name.small-12.medium-6.columns
+        label for="lastname" Last Name
+        input id="lastname" name="lastname" type="text" placeholder="Last"
 
-  .attending
-    label for="attending" Attending?
-    input id="attending" name="attending" type="checkbox"/
-  
-  .guests.js-guests style="display: none;"
-    label for="guests" Number of Guests
-    input id="guests" name="guests" type="number"/
+    .email
+      label for="email" Email
+      input id="email" name="email" type="email" placeholder="you@example.com"
 
-  input type="submit" value="Submit"/
+    .attending
+      input id="attending" name="attending" type="checkbox"
+      label for="attending" Attending?
+    
+    .guests.js-guests style="display: none;"
+      label for="guests" Number of Guests
+      input id="guests" name="guests" type="number"
 
+    input type="submit" value="Submit"

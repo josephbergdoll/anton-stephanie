@@ -123,14 +123,15 @@ a {
 %sg-h5 {
   font-family: $sans;
   font-size: $type-paragraph;
-  font-weight: $type-bold;
+  font-weight: $type-book;
   @extend %aa-text;
 }
 
 %sg-h6 {
   font-family: $sans;
-  font-size: $type-paragraph;
+  font-size: $type-small;
   font-weight: $type-book;
+  text-transform: uppercase;
   @extend %aa-text;
 }
 
