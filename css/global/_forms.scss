@@ -7,11 +7,19 @@
   outline: 0;
 }
 
-input,
+input:not([type='checkbox']),
 textarea,
 select,
 button {
   @extend %form-reset;
+}
+
+input[type='text'],
+input[type='email'] {
+  background: $light-white;
+  padding: $half-gutter * 0.5;
+  font-family: $sans;
+  font-size: $type-paragraph;
 }
 
 %sg-button {
@@ -21,21 +29,17 @@ button {
   font-size: $type-paragraph;
   color: $white;
   font-weight: $type-bold;
-  background-color: $blue-highlight;
-  border-radius: $standard-border-radius;
+  background-color: $mid-black;
   padding: 1.25rem 6rem 1.15rem;
   transition: background-color $hover-out $ease-out-cubic;
-  border-bottom: $thick-border-width solid $blue-highlight-hover;
   transition: all $hover-out $ease-out-cubic;
   &:hover {
-    background-color: $blue-highlight-hover;
+    background-color: $dark-black;
     transition: all $hover-in $ease-out-cubic;
   }
   &:disabled {
     cursor: not-allowed;
-    background: $blue-bg-dark;
-    color: $blue-bg;
-    border-bottom: $thick-border-width solid transparent;
+    background: $dark-grey;
   }
   .quote-loading & {
     cursor: wait;
@@ -43,6 +47,7 @@ button {
 }
 
 *[class*="button"],
+input[type='submit'],
 button {
   @extend %sg-button;
 }
