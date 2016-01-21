@@ -1,0 +1,63 @@
+#index {
+  display: none;
+  #first {
+    position: relative;
+    @include media($small) {
+      min-height: 0;
+      margin-bottom: $vertical-bumper-half;
+    }
+
+    .photo-inner {
+      width: 100%;
+      padding-bottom: 100%;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      @include media($medium-up) {
+        width: auto;
+        position: absolute;
+        padding-bottom: 0;
+        top: $full-gutter;
+        left: $full-gutter;
+        right: $full-gutter;
+        bottom: $full-gutter;
+      }
+    }
+  }
+
+  #second {
+    @include media($small) {
+      padding-bottom: $vertical-bumper-half;
+    }
+    .wrapper > .row > div {
+      &:not(:last-of-type) {
+        @include media($small) {
+          margin-bottom: $vertical-bumper-half;
+        }
+      }
+    }
+    .rsvp {
+      @include clearfix();
+      button {
+        width: 100%;
+        @include media($medium-up) {
+          width: auto;
+          float: right;
+        }
+      }
+    }
+    .password-prompt-contain {
+      display: none;
+      input {
+        width: 100%;
+      }
+      #password {
+        margin-bottom: $vertical-bumper-eighth;
+      }
+    }
+  }
+
+  #rsvp-wrap {
+    display: none;
+  }
+}

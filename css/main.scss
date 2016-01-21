@@ -22,7 +22,8 @@
 @import "global/slick";
 
 // Components
+@import "components/loader";
 @import "components/rsvp";
 
 // Templates
-// @import "templates/*";
+@import "templates/index";

@@ -90,7 +90,7 @@ a {
     font-size: $type-mid;
   }
   @include media($large-up) {
-    font-size: $type-large;
+    font-size: $type-xlarge;
   }
   @extend %aa-text;
 }

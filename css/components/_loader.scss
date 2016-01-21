@@ -1,0 +1,9 @@
+.global-loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  @include transform(translateY(-50%) translateX(-50%));
+  @include animation(2s loader infinite);
+  z-index: 20;
+}

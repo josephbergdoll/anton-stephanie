@@ -1,5 +1,5 @@
 # Site settings
-url: "http://bifs.jsph.us" # the base hostname & protocol for your site
+url: "http://anton-stephanie.jsph.us" # the base hostname & protocol for your site
 
 # Build settings
 markdown: rdiscount

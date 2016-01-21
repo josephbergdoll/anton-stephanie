@@ -6,6 +6,15 @@
   text-align: right;
 }
 
+.flex-align-center {
+  align-items: center;
+}
+
+.align-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .stroke-top {
   border-top: $standard-border;
   padding-top: $vertical-bumper-quarter;

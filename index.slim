@@ -2,20 +2,27 @@
 layout: default
 preheadline: "The Union Of"
 headline: "ANTON PETER ANGER<br><br>ST&Eacute;PHANIE ELISABETH SOPHIA<br>van SASSE van YSSELT"
+photo: "images/cover.jpg"
+join_us: "Join us on<br>September 10th, 2016<br><br>in Somerset, Virginia<br>United States"
 ---
+#index
+  section#first.full-viewport
+    .wrapper
+      .photo-inner style="background-image: url({{ site.url }}/{{ page.photo }});"
 
-section#first.full-viewport
-  .photo-inner
-
-section#second
-  .wrapper
-    .row
-      .headline.small-12.medium-4.columns
-        h5 {{ page.preheadline }}
-        h1 {{ page.headline }}
-
-section#third
-  .wrapper
-    .row
-      .small-12.medium-6.columns
-       {% include rsvp.slim %}
+  section#second.bottom-padding.half
+    .wrapper
+      .row
+        .headline.small-12.medium-6.columns
+          h5 {{ page.preheadline }}
+          h1 {{ page.headline }}
+        .join-us.small-12.medium-3.columns
+          h5 {{ page.join_us }}
+        .rsvp.small-12.medium-3.columns
+          button.js-rsvp-opener RSVP
+          .password-prompt-contain
+            form#rsvp-code
+              label for="password" Your Code
+              input#password type="password"/
+              input type="submit" value="Open RSVP"/
+  section#rsvp-wrap

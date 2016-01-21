@@ -7,7 +7,9 @@
   outline: 0;
 }
 
-input:not([type='checkbox']),
+input[type='text'],
+input[type='email'],
+input[type='submit'],
 textarea,
 select,
 button {
@@ -31,7 +33,9 @@ input[type='checkbox'] {
 }
 
 input[type='text'],
-input[type='email'] {
+input[type='email'],
+input[type='number'],
+input[type='password'] {
   background: $light-white;
   padding: $half-gutter * 0.5;
   font-family: $sans;
@@ -49,11 +53,12 @@ input[type='email'] {
   @extend %aa-text;
   cursor: pointer;
   font-family: $sans;
-  font-size: $type-paragraph;
+  font-size: $type-small;
   color: $white;
   font-weight: $type-bold;
+  text-transform: uppercase;
   background-color: $mid-black;
-  padding: 1.25rem 6rem 1.15rem;
+  padding: 0.65rem 3rem 0.65rem;
   transition: background-color $hover-out $ease-out-cubic;
   transition: all $hover-out $ease-out-cubic;
   &:hover {
@@ -66,6 +71,18 @@ input[type='email'] {
   }
   .quote-loading & {
     cursor: wait;
+  }
+  &.cta {
+    padding: 1.25rem 6rem 1.15rem;
+  }
+}
+
+.form-helper {
+  @extend %sg-h6;
+  color: $text-mid-grey;
+  margin-top: $vertical-bumper-eighth;
+  .form-error & {
+    color: $red;
   }
 }
 
