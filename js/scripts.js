@@ -5,7 +5,7 @@ $(document).ready(function() {
     $body = $('body'),
     $getQuote = $body.find('#get-quote'),
     $submitQuote = $body.find('#submit-quote'),
-    rsvpPassword = 'simon';
+    rsvpPassword = 'summerlove';
   
 
   function validateEmail(email) {
