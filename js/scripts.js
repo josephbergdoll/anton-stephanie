@@ -25,7 +25,7 @@ $(document).ready(function() {
     return $.trim(result);
   };
 
-   function postContactToGoogle(){
+   function postContactToGoogle(callback){
     var
       firstname = $('#firstname').val(),
       lastname = $('#lastname').val(),
@@ -53,6 +53,7 @@ $(document).ready(function() {
             $('#email').val("");
             $('#attending').prop('checked', false);
             $('#guests').val("");
+            callback();
             //Success message
           },
           200: function (){
@@ -62,6 +63,7 @@ $(document).ready(function() {
             $('#email').val("");
             $('#attending').prop('checked', false);
             $('#guests').val("");
+            callback();
             //Success Message
           }
         }
@@ -137,7 +139,16 @@ $(document).ready(function() {
 
     $('#rsvp-form').submit(function(event) {
       event.preventDefault();
-      postContactToGoogle();
+      postContactToGoogle(function() {
+        var
+          $rsvpParent = $('#rsvp-form').parent(),
+          successHtml = '<div id="success" style="display: none;"><h1>Thank you!</h1><p>We&rsquo;ll be in touch soon.</p></div>';
+        $('#rsvp-form').velocity('slideUp', {duration: 400, easing: "easeInOutCubic", queue: false});
+        $('#rsvp-form').velocity({opacity: 0}, {duration: 400, easing: "easeInOutCubic", queue: false});
+        $rsvpParent.append(successHtml);
+        $rsvpParent.find('#success').velocity('slideDown', {duration: 400, easing: "easeInOutCubic", queue: false});
+        $rsvpParent.find('#success').velocity({opacity: 1}, {duration: 400, easing: "easeInOutCubic", queue: false});
+      });
     });
   });
 
