@@ -89,7 +89,7 @@ $(document).ready(function() {
     var password = $('#password').val();
 
     if (password === rsvpPassword) {
-      var rsvpUrl = '/rsvp.html';
+      var rsvpUrl = 'rsvp.html';
       $.ajax({
         url: rsvpUrl,
         success: function(data, textStatus, jqXHR) {
@@ -142,10 +142,18 @@ $(document).ready(function() {
       postContactToGoogle(function() {
         var
           $rsvpParent = $('#rsvp-form').parent(),
-          successHtml = '<div id="success" style="display: none;"><h1>Thank you!</h1><p>We&rsquo;ll be in touch soon.</p></div>';
+          en_thankYou = 'Thank you!',
+          en_successHtml = '<div id="success" style="display: none;"><h1>Thank you!</h1><p>We&rsquo;ll be in touch soon.</p></div>',
+          es_successHtml = '<div id="success" style="display: none;"><h1>¡Gracias!</h1><p>Pronto tendremos más detalles para compartir.</p></div>',
+          href = window.location.href;
         $('#rsvp-form').velocity('slideUp', {duration: 400, easing: "easeInOutCubic", queue: false});
         $('#rsvp-form').velocity({opacity: 0}, {duration: 400, easing: "easeInOutCubic", queue: false});
-        $rsvpParent.append(successHtml);
+        if (href.indexOf('/es') != -1) {
+          $rsvpParent.append(es_successHtml);
+        }
+        else {
+          $rsvpParent.append(en_successHtml);
+        }
         $rsvpParent.find('#success').velocity('slideDown', {duration: 400, easing: "easeInOutCubic", queue: false});
         $rsvpParent.find('#success').velocity({opacity: 1}, {duration: 400, easing: "easeInOutCubic", queue: false});
       });

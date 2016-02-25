@@ -1,3 +1,11 @@
 <div class="global-loader js-loader">
-  <h6 class="uppercase type-bold">September 10th<br>2016</h4>
+  <h6 class="uppercase type-bold">
+    {% if page.url contains '/es' %}
+    10 de Septiembre
+    {% else %}
+    September 10th
+    {% endif %}
+    <br>
+    2016
+  </h6>
 </div>

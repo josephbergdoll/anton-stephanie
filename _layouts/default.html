@@ -44,6 +44,11 @@
   <body>
     {% include loader.html %}
     <div id="page-content">
+      <div class="language-select h6">
+        <a class="h4 {% if page.url != '/es/' %}active{% endif %}" href="{{ site.url }}">EN</a>
+        /
+        <a class="h4 {% if page.url contains '/es' %}active{% endif %}" href="{{ site.url }}/es/">ES</a>
+      </div>
       {{ content }}
     </div>
   </body>

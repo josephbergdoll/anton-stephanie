@@ -41,6 +41,17 @@
   }
 }
 
+.language-select {
+  position: fixed;
+  top: $full-gutter;
+  right: $full-gutter;
+  z-index: 20;
+  color: $text-light-grey;
+  a:not(.active):not(:hover) {
+    color: $text-light-grey;
+  }
+}
+
 .divider {
   @extend .wrapper;
   margin-top: $vertical-bumper-half;

@@ -1,0 +1,37 @@
+---
+layout: default
+headline: "RSVP &rarr;"
+copy: "Por favor completar el casillero para confirmar &mdash; pronto tendremos m&aacute; s detalles para compartir."
+---
+
+#rsvp.bottom-padding
+  .wrapper
+    .row
+      .small-12.medium-6.columns
+        h1.bottom-margin.quarter.light-grey {{ page.headline }}
+        p {{ page.copy }}
+      .small-12.medium-6.columns
+        form#rsvp-form
+          .name-wrap.row
+            .first-name.small-12.medium-6.columns
+              label for="firstname" Nombre
+              input id="firstname" name="firstname" type="text" placeholder="First" required="required"
+            
+            .last-name.small-12.medium-6.columns
+              label for="lastname" Apellido
+              input id="lastname" name="lastname" type="text" placeholder="Last" required="required"
+
+          .email
+            label for="email" Email
+            input id="email" name="email" type="email" placeholder="you@example.com" required="required"
+          
+          .attending-guests-wrap.flex-row.flex-align-center
+            .attending.small-12.medium-6.flex-columns
+              input id="attending" name="attending" type="checkbox"
+              label for="attending" Por favor confirmar: Si? No?
+            
+            .guests.js-guests.small-12.medium-6.flex-columns style="display: none;"
+              label for="guests" ¿Cu&aacute;ntos invitados?
+              input id="guests" name="guests" type="number"
+
+          input.cta type="submit" value="Enviar"
